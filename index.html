@@ -12,7 +12,7 @@
     <div id="welcome-screen">
       <h1>Hi, Radya!</h1>
       <p>Are you ready for a magical journey of love and surprises?</p>
-      <button id="start-game-button">Start Game</button>
+      <button id="start-game-button">Let's Start</button>
     </div>
 
     <!-- Custom Avatar Guide -->
@@ -51,7 +51,7 @@
       <div class="timeline">
         <div class="timeline-item">
           <h3>How We Met..</h3>
-          <p>On that serendipitous day, our paths crossed, and my life changed forever.</p>
+          <p>On that serendipitous day, when i saw u ✨, and my life changed forever.</p>
         </div>
         <div class="timeline-item">
           <h3>First Adventure..</h3>
@@ -114,33 +114,7 @@
       <button id="mini-game-next-button">Next Scene</button>
     </div>
 
-    <!-- Mini Game: Love Symbol Choices -->
-    <div id="min-game" style="display: none;">
-        <h2>Choose Your Love Symbol</h2>
-        <p>Select a token of love that speaks to your heart.</p>
-        <div class="choice-container">
-          <div id="flower-choice" class="choice">
-            <img src="flower.png" alt="Flower">
-            <p>Flower</p>
-          </div>
-          <div id="chocolate-choice" class="choice">
-            <img src="chocolate.png" alt="Chocolate">
-            <p>Chocolate</p>
-          </div>
-          <div id="ring-choice" class="choice">
-            <img src="ring.png" alt="Ring">
-            <p>Engagement Ring</p>
-          </div>
-          <div id="food-choice" class="choice">
-              <img src="ring.png" alt="food">
-              <p>Food</p>
-            </div>
-        </div>
-        <div id="choice-result" class="hidden-message">
-          <p>you choose<span id="selected-symbol"></span></p>
-        </div>
-        <button id="mini-game-next-button">Next Scene</button>
-      </div>
+    
 
     <!-- Proposal Scene -->
     <div id="proposal-scene" style="display: none;">
@@ -177,11 +151,19 @@
     <!-- Celebration Scene -->
     <div id="celebration-scene" style="display: none;">
       <div class="celebration">
-        <h1>Congratulations, Radya!</h1>
+        <h1>Thank you my love, Radya!🥰💕</h1>
         <p>You’ve made this journey unforgettable. Thank you for being you! ❤️</p>
         <img src="https://www.icegif.com/wp-content/uploads/2024/08/celebration-icegif-8.gif" alt="Celebration">
         <p>Your love shines brighter than the stars in the sky.</p>
       </div>
+    </div>
+  </div>
+
+  <!-- Custom Popup for Proposal Think Alert -->
+<div class="popup" id="proposal-think-popup">
+    <div class="popup-content">
+      <p id="celebration-scene"></p>
+      <button id="close-proposal-think-popup" class="close-popup">Close</button>
     </div>
   </div>
 

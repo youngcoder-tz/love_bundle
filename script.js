@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Function to log data to MongoDB
     async function logToMongoDB(action) {
       try {
-        const response = await fetch("http://localhost:3000/log-click", {
+        const response = await fetch("https://love-bundle.onrender.com/log-click", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
