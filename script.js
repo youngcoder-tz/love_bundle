@@ -161,3 +161,61 @@ document.addEventListener("DOMContentLoaded", async () => {
       alert("This journey is only the beginning of a lifetime together. ❤️");
     });
   });
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const numStars = 100; // Number of stars
+    const body = document.body;
+
+    for (let i = 0; i < numStars; i++) {
+      const star = document.createElement("div");
+      star.classList.add("star");
+
+      // Randomize star size and initial position
+      const size = Math.random() * 3 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+
+      // Randomize animation duration and delay
+      const duration = Math.random() * 5 + 3; // Between 3s to 8s
+      const delay = Math.random() * 5; // Up to 5s delay
+      star.style.animationDuration = `${duration}s`;
+      star.style.animationDelay = `${delay}s`;
+
+      body.appendChild(star);
+
+      // Remove star after animation to keep the DOM clean
+      star.addEventListener("animationend", () => {
+        body.removeChild(star);
+      });
+    }
+
+    // Continuously add stars for infinite effect
+    setInterval(() => {
+      const star = document.createElement("div");
+      star.classList.add("star");
+
+      const size = Math.random() * 3 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.top = `-5vh`; // Start above the viewport
+      star.style.left = `${Math.random() * 100}vw`;
+
+      const duration = Math.random() * 5 + 3;
+      const delay = Math.random() * 5;
+      star.style.animationDuration = `${duration}s`;
+      star.style.animationDelay = `${delay}s`;
+
+      body.appendChild(star);
+
+      star.addEventListener("animationend", () => {
+        body.removeChild(star);
+      });
+    }, 300); // Add a new star every 300ms
+  });

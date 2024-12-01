@@ -241,7 +241,7 @@ button:hover {
 #fireflies::before, #fireflies::before {
   content: '';
   position: absolute;
-  background: radial-gradient(circle, #00111a94, #000a0e54);
+  background: radial-gradient(circle, #00111a46, #000a0e54);
   top: 0;
   left: 0;
   width: 100%;
