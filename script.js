@@ -58,14 +58,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Start Game
     startGameButton.addEventListener("click", () => {
-      logToMongoDB("Started Game");
       playMusic(backgroundMusic);
       showScene("welcome-screen", "guide-screen");
     });
 
     // Proceed to Firefly Scene
     proceedButton.addEventListener("click", () => {
-      logToMongoDB("Proceeded to Firefly Scene");
       showScene("guide-screen", "scene-fireflies");
 
       // Fireflies animation duration
@@ -147,7 +145,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Easter Egg: Fireflies Clicking Interaction
     document.getElementById("fireflies").addEventListener("click", () => {
-      logToMongoDB("Clicked on Fireflies");
       document.getElementById("fireflies-popup-message").textContent = "Did you know? These fireflies symbolize the little sparks of joy you bring into my life!";
       document.getElementById("fireflies-popup").style.display = "flex";
     });
