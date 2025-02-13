@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 // MongoDB Connection (Hardcoded URI)
 mongoose
-  .connect("mongodb+srv://jomjoam0:jomjoam0@cluster0.frv6a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+  .connect("mongodb://localhost:27017", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
