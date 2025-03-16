@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const MONGODB_URI = "mongodb+srv://jomjoam0:jomjoam0@cluster0.frv6a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-    // Function to log data to MongoDB
+    
     async function logToMongoDB(action) {
       try {
         const response = await fetch("https://love-bundle.onrender.com/log-click", {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
-    // Elements
+    
     const startGameButton = document.getElementById("start-game-button");
     const proceedButton = document.getElementById("proceed-button");
     const firefliesNextButton = document.getElementById("fireflies-next-button");
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const choiceResult = document.getElementById("choice-result");
     const selectedSymbol = document.getElementById("selected-symbol");
 
-    // Music and Sound Effects
+
     const backgroundMusic = new Audio("background-music.mp3");
     const celebrationMusic = new Audio("celebration-music.mp3");
     const clueSound = new Audio("clue-sound.mp3");
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.getElementById(showId).style.display = "block";
     }
 
-    // Start Game
+   
     startGameButton.addEventListener("click", () => {
       logToMongoDB("Started Game");
       playMusic(backgroundMusic);
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }, 9000);
     });
 
-    // Navigate to Hidden Clues from "About Us"
+  
     aboutUsNextButton.addEventListener("click", () => {
       logToMongoDB("Navigated to Hidden Clues");
       showScene("about-us", "hidden-clues");
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       showScene("hidden-clues", "mini-game");
     });
 
-    // Love Symbol Choices
+    
     document.getElementById("flower-choice").addEventListener("click", () => handleChoice("🌹 lovely 🥰💕", "Flower"));
     document.getElementById("chocolate-choice").addEventListener("click", () => handleChoice("🔥cool 😎✨", "Chocolate"));
     document.getElementById("ring-choice").addEventListener("click", () => handleChoice("🤩😱 wwwooow! 😍🥰", "Ring"));
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       showScene("mini-game", "proposal-scene");
     });
 
-    // Proposal Response
+    
     proposalYesButton.addEventListener("click", () => {
       logToMongoDB("Proposal Accepted");
       stopMusic(backgroundMusic);
@@ -167,21 +167,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
   document.addEventListener("DOMContentLoaded", () => {
-    const numStars = 100; // Number of stars
+    const numStars = 100; 
     const body = document.body;
 
     for (let i = 0; i < numStars; i++) {
       const star = document.createElement("div");
       star.classList.add("star");
 
-      // Randomize star size and initial position
+      
       const size = Math.random() * 3 + 1;
       star.style.width = `${size}px`;
       star.style.height = `${size}px`;
       star.style.top = `${Math.random() * 100}vh`;
       star.style.left = `${Math.random() * 100}vw`;
 
-      // Randomize animation duration and delay
+      
       const duration = Math.random() * 5 + 3; // Between 3s to 8s
       const delay = Math.random() * 5; // Up to 5s delay
       star.style.animationDuration = `${duration}s`;
@@ -189,13 +189,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       body.appendChild(star);
 
-      // Remove star after animation to keep the DOM clean
+      
       star.addEventListener("animationend", () => {
         body.removeChild(star);
       });
     }
 
-    // Continuously add stars for infinite effect
+    
     setInterval(() => {
       const star = document.createElement("div");
       star.classList.add("star");
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const size = Math.random() * 3 + 1;
       star.style.width = `${size}px`;
       star.style.height = `${size}px`;
-      star.style.top = `-5vh`; // Start above the viewport
+      star.style.top = `-5vh`;
       star.style.left = `${Math.random() * 100}vw`;
 
       const duration = Math.random() * 5 + 3;
@@ -216,5 +216,5 @@ document.addEventListener("DOMContentLoaded", async () => {
       star.addEventListener("animationend", () => {
         body.removeChild(star);
       });
-    }, 300); // Add a new star every 300ms
+    }, 300); 
   });
