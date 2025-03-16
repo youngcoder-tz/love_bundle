@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-// Initialize app
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// MongoDB Connection (Hardcoded URI)
+
 mongoose
   .connect("mongodb://localhost:27017", {
     useNewUrlParser: true,
@@ -20,7 +20,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((error) => console.error("Error connecting to MongoDB:", error));
 
-// Define Schema and Model
+
 const clickSchema = new mongoose.Schema({
   action: { type: String, required: true },
   timestamp: { type: Date, required: true },
@@ -28,7 +28,7 @@ const clickSchema = new mongoose.Schema({
 
 const Click = mongoose.model("Click", clickSchema);
 
-// Routes
+
 app.get("/", (req, res) => {
   res.send("Welcome to the Click Logger API!");
 });
@@ -50,7 +50,7 @@ app.post("/log-click", async (req, res) => {
   }
 });
 
-// Start Server
+
 app.listen(PORT, () => {
   console.log(`Server is running on https://love-bundle.onrender.com`);
 });
